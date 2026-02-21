@@ -90,3 +90,13 @@ Designed to demonstrate scalable fleet automation and operational intelligence.
 
 ---
 
+## 📸 Screenshots
+
+### 🔐 Login Page
+![Login Page](Screenshots/login.png)
+
+### 📊 Dashboard
+![Dashboard](Screenshots/dashboard.png)
+
+---
+
