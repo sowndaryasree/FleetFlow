@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FleetFlow</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="header">
+  FleetFlow 🚛 | Modular Fleet Management
+</header>
+
+<div id="loginSection" class="centered">
+  <div class="card">
+    <h2>Login</h2>
+    <input type="email" id="email" placeholder="Email">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+  </div>
+</div>
+
+<div id="appSection" class="hidden">
+  <aside class="sidebar">
+    <button onclick="loadDashboard()">Dashboard</button>
+    <button onclick="loadVehicles()">Vehicles</button>
+    <button onclick="loadDrivers()">Drivers</button>
+    <button onclick="loadTrips()">Trips</button>
+    <button onclick="loadMaintenance()">Maintenance</button>
+    <button onclick="loadFuel()">Fuel Logs</button>
+    <button onclick="logout()">Logout</button>
+  </aside>
+
+
+  <main class="content" id="contentArea"></main>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script type="module" src="app.js"></script>
+
+</body>
+</html>

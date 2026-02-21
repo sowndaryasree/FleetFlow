@@ -1,0 +1,175 @@
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #0b0b14;
+  color: #e5e7eb;
+}
+
+/* HEADER */
+.header {
+  padding: 18px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 20px;
+  background: #11111c;
+  color: #d8b4fe;
+  border-bottom: 1px solid rgba(216, 180, 254, 0.15);
+}
+
+/* LOGIN CENTER */
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+/* LOGIN CARD */
+.card {
+  background: #141422;
+  padding: 30px;
+  border-radius: 12px;
+  width: 320px;
+  border: 1px solid rgba(216, 180, 254, 0.15);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* INPUTS */
+input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(216, 180, 254, 0.2);
+  background: #1a1a2a;
+  color: #ffffff;
+}
+
+input:focus {
+  border-color: #c084fc;
+  box-shadow: 0 0 6px rgba(192, 132, 252, 0.3);
+  outline: none;
+}
+
+/* BUTTONS - PREMIUM OUTLINE STYLE */
+button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px;
+  border-radius: 6px;
+  border: 1px solid #c084fc;
+  background: transparent;
+  color: #d8b4fe;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  background: rgba(192, 132, 252, 0.12);
+  box-shadow: 0 0 10px rgba(192, 132, 252, 0.25);
+  transform: translateY(-2px);
+}
+
+/* HIDDEN FIX */
+.hidden {
+  display: none;
+}
+
+/* APP SECTION */
+#appSection {
+  display: flex;
+  height: calc(100vh - 60px);
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 220px;
+  background: #11111c;
+  height: 100vh;
+  padding: 20px;
+  border-right: 1px solid rgba(216, 180, 254, 0.12);
+}
+
+/* SIDEBAR BUTTONS */
+.sidebar button {
+  background: none;
+  color: #c4b5fd;
+  text-align: left;
+  padding: 10px;
+  border: none;
+  width: 100%;
+  border-left: 3px solid transparent;
+}
+
+.sidebar button:hover {
+  background: rgba(192, 132, 252, 0.08);
+  color: #ffffff;
+  border-left: 3px solid #c084fc;
+}
+
+/* CONTENT */
+.content {
+  flex: 1;
+  padding: 30px;
+  overflow-y: auto;
+}
+
+/* FORM ROW */
+.form-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+/* TABLE */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.data-table th,
+.data-table td {
+  padding: 10px;
+  border-bottom: 1px solid rgba(216, 180, 254, 0.12);
+}
+
+.data-table tr:hover {
+  background: rgba(192, 132, 252, 0.05);
+}
+
+/* BADGES */
+.badge {
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  color: white;
+}
+
+.available { background: #15803d; }
+.ontrip { background: #b45309; }
+.inshop { background: #b91c1c; }
+.retired { background: #475569; }
+.onduty { background: #15803d; }
+.offduty { background: #b45309; }
+.suspended { background: #b91c1c; }
+
+/* DASHBOARD CARDS */
+.analytics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.card-box {
+  background: #141422;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid rgba(216, 180, 254, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-box:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 15px rgba(192, 132, 252, 0.2);
+}
