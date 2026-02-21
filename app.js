@@ -15,7 +15,7 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
 
-/* LOGIN */
+
 window.login = function () {
 
   const email = document.getElementById("email").value;
@@ -25,13 +25,11 @@ window.login = function () {
 
     .then(() => {
 
-      // Hide login section
+     
       document.getElementById("loginSection").classList.add("hidden");
 
-      // Show main app
       document.getElementById("appSection").classList.remove("hidden");
 
-      // Load dashboard
       loadDashboard();
 
     })
@@ -41,12 +39,12 @@ window.login = function () {
       console.log(error);
     });
 };
-/* LOGOUT */
+
 window.logout = function () {
   signOut(auth).then(() => location.reload());
 };
 
-/* DASHBOARD */
+
 window.loadDashboard = async function () {
 
   const vehicleSnap = await getDocs(collection(db, "vehicles"));
@@ -77,7 +75,6 @@ window.loadDashboard = async function () {
 
   const totalOperationalCost = totalMaintenanceCost + totalFuelCost;
 
-  // BUILD HTML
   let html = `
     <h2>Fleet Analytics</h2>
 
@@ -116,13 +113,12 @@ window.loadDashboard = async function () {
     <canvas id="costChart" height="100"></canvas>
   `;
 
-  // Inject HTML FIRST
+
   document.getElementById("contentArea").innerHTML = html;
 
-  // Animate AFTER rendering
   animateCounter(".card-box p");
 
-  // Create Chart AFTER canvas exists
+
   new Chart(document.getElementById("costChart"), {
     type: 'bar',
     data: {
@@ -153,8 +149,6 @@ window.loadDashboard = async function () {
 
 };
 
-
-// Counter function OUTSIDE dashboard
 function animateCounter(selector) {
 
   document.querySelectorAll(selector).forEach(el => {
@@ -498,7 +492,7 @@ window.loadMaintenance = async function () {
   vehicleSnap.forEach(docSnap => {
     const v = docSnap.data();
 
-    // Only vehicles not retired
+    
     if (v.status !== "Retired") {
       vehicleOptions += `<option value="${docSnap.id}">${v.name}</option>`;
     }
@@ -586,7 +580,7 @@ window.addMaintenance = async function () {
     date: today
   });
 
-  // 🔥 AUTO SET VEHICLE TO IN SHOP
+ 
   await updateDoc(doc(db, "vehicles", vehicleId), {
     status: "In Shop"
   });
