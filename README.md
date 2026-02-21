@@ -19,6 +19,22 @@ Built for hackathon demonstration and scalable for real-world logistics operatio
 
 ---
 
+## 🔐 Demo Login Credentials
+
+Use the following credentials to access the system:
+
+### 👤 Admin User
+- **Email:** 123@gmail.com  
+- **Password:** 123456  
+
+### 👤 Manager User
+- **Email:** abc@gmail.com  
+- **Password:** 123456  
+
+> These credentials are for demonstration purposes only.
+
+---
+
 ## 🧠 Smart Capabilities
 
 - Automatic vehicle status transitions
